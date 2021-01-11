@@ -1,0 +1,30 @@
+$baseStrong: #222222;
+$baseWeak: #ffffff;
+$faintWeak: #f3f7fa;
+$accentStrong: #fb7363;
+$faintStrong: #bdc2c7;
+$faintWeakUp: #e1e7ec;
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1140px;
+
+$boxShadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+$border: 1px solid $faintWeakUp;
+
+:root {
+  --whiteSpace: 15px;
+}
+
+@mixin flexItem($algn, $jst, $flow) {
+  display: flex;
+  align-items: $algn;
+  justify-content: $jst;
+  flex-flow: $flow;
+}
+
+@mixin mediaQuery($resolution) {
+  @media screen and (min-width: $resolution) {
+    @content;
+  }
+}

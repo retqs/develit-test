@@ -1,0 +1,25 @@
+.feedPagination {
+  margin: 40px 0 70px 0;
+  @include flexItem(center, center, row);
+
+  &__button {
+    background: $accentStrong;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    color: $baseWeak;
+    border-radius: 100px;
+    border: none;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__count {
+    margin: 0 10px;
+    color: $baseStrong;
+    font-size: 14px;
+    text-align: center;
+    line-height: 19px;
+  }
+}

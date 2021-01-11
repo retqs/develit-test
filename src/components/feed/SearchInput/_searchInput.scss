@@ -1,0 +1,37 @@
+.searchBar {
+  height: 50px;
+  width: 100%;
+  background: $baseWeak;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  border: $border;
+
+  &__label {
+    margin: 0 16px 0 16px;
+
+    @include flexItem(center, center, row);
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+
+    font-family: inherit;
+    outline: none;
+
+    border: none;
+
+    &::placeholder {
+      color: $faintStrong;
+    }
+  }
+
+  @include mediaQuery($mobile) {
+    &__input {
+    }
+  }
+}

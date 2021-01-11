@@ -1,0 +1,61 @@
+@import './var';
+
+@import '../../components/shared/Navbar/navbar';
+@import '../../components/shared/BreadCrumbs/breadCrumbs';
+@import '../../components/shared/Loader/loader';
+
+@import '../../components/feed/FeedList/feedList';
+@import '../../components/feed/FeedCard/feedCard';
+@import '../../components/feed/Filters/filters';
+@import '../../components/feed/SearchInput/searchInput';
+@import '../../components/feed/Pagination/pagination';
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+
+  background: $faintWeak;
+}
+
+.appContainer {
+  height: 100%;
+  max-width: $desktop;
+
+  margin: auto;
+
+  @include mediaQuery($mobile) {
+    @include flexItem(flex-start, flex-start, column wrap);
+    padding: 0 var(--whiteSpace);
+  }
+
+  @include mediaQuery($tablet) {
+    @include flexItem(flex-start, flex-start, row wrap);
+  }
+
+  @include mediaQuery($desktop) {
+    padding: 0;
+  }
+}
+
+.content {
+  @include mediaQuery($mobile) {
+    width: 100%;
+  }
+
+  @include mediaQuery($tablet) {
+    margin-left: 30px;
+    width: calc(100% - 290px);
+  }
+}
+
+.btn {
+  outline: none;
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+.breadCrumbsContainer {
+  max-width: $desktop;
+
+  margin: 0 auto var(--whiteSpace) auto;
+  text-align: left;
+}
+
+.breadCrumbs {
+  list-style: none;
+
+  @include mediaQuery($mobile) {
+    @include flexItem(center, center, row wrap);
+    padding: 0;
+  }
+
+  @include mediaQuery($tablet) {
+    @include flexItem(center, flex-start, row wrap);
+
+    padding: 0 var(--whiteSpace);
+  }
+
+  @include mediaQuery($desktop) {
+    padding: 0;
+  }
+
+  svg {
+    height: 15px;
+    width: 25px;
+  }
+
+  &__item {
+    a {
+      color: $accentStrong;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+
+    &.lastLink {
+      a {
+        color: $faintStrong;
+        font-weight: 400;
+      }
+    }
+  }
+}

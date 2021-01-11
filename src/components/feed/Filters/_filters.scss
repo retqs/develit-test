@@ -1,0 +1,102 @@
+.filtersBox {
+  width: 100%;
+
+  background: $baseWeak;
+  box-shadow: $boxShadow;
+
+  font-weight: 600;
+  border-radius: 2px;
+
+  @include mediaQuery($mobile) {
+    margin-bottom: 10px;
+  }
+
+  @include mediaQuery($tablet) {
+    max-width: 260px;
+  }
+}
+
+.filtersHeader {
+  padding: 12px;
+  position: relative;
+  @include flexItem(center, space-between, row);
+
+  &__title {
+    font-size: 14px;
+  }
+
+  svg {
+    transition: all 0.3s ease;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $faintWeak;
+  }
+
+  @include mediaQuery($tablet) {
+    svg {
+      display: none;
+    }
+  }
+}
+
+.filtersBody {
+  padding: 10px;
+
+  .filterTitle {
+    font-size: 12px;
+    color: $faintStrong;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  .filterBlock {
+    width: 100%;
+    position: relative;
+    border: none;
+    margin-top: 10px;
+
+    &__label {
+      display: flex;
+      width: 100%;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    &__checkbox {
+      position: relative;
+      border: $border;
+      height: 20px;
+      width: 20px;
+      border-radius: 1px;
+
+      //   @include flexItem(center, center, row);
+
+      &.active {
+        border-color: $accentStrong;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.loader {
+  margin: 10vh 0;
+
+  @include flexItem(center, center, row);
+}
