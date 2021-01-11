@@ -25,7 +25,10 @@ function Filters({data, handleChange, filtersState}: any): JSX.Element {
 
   return (
     <div className='filtersBox'>
-      <div className='filtersHeader' onClick={() => (width < 768 ? setIsOpen(!isOpen) : '')}>
+      <div
+        className={`filtersHeader ${isOpen ? 'iconRotate' : ''}`}
+        onClick={() => (width < 768 ? setIsOpen(!isOpen) : '')}
+      >
         <span className='filtersHeader__title'>Filters</span>
         <Arrow></Arrow>
       </div>

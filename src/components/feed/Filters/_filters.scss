@@ -21,6 +21,12 @@
   position: relative;
   @include flexItem(center, space-between, row);
 
+  &.iconRotate {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
   &__title {
     font-size: 14px;
   }
